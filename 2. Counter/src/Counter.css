@@ -1,0 +1,105 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 4px; 
+  width: 300px;
+  margin: 2rem auto;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  animation: pulse-border 3s infinite alternate;
+}
+@keyframes pulse-border {
+  0% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.1); border-color: #333; }
+  100% { box-shadow: 0 0 25px rgba(0, 255, 255, 0.2); border-color: #00ffff; }
+}
+.time-display {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px dashed #444;
+  padding-top: 1rem;
+}
+.time-display h3 {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #888;
+}
+.time-display p {
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+  color: #00ff9d; 
+  text-shadow: 0 0 5px rgba(0, 255, 157, 0.5);
+  font-weight: 500;
+}
+.counter-display {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+.counter-display h1 {
+  font-size: 7rem;
+  margin: 0;
+  line-height: 0.9;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 
+    2px 2px 0px #ff00ff, 
+    -2px -2px 0px #00ffff;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.button-group {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+.button-group button {
+  flex: 1;
+  padding: 1rem 0.5rem;
+  font-family: inherit; 
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  border: 2px solid;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.button-group button:first-child {
+  border-color: #ff2a6d;
+  color: #ff2a6d;
+}
+.button-group button:first-child:hover {
+  background-color: #ff2a6d;
+  color: #121212;
+  box-shadow: 0 0 20px #ff2a6d;
+}
+.button-group button:last-child {
+  border-color: #05d9e8;
+  color: #05d9e8;
+}
+.button-group button:last-child:hover {
+  background-color: #05d9e8;
+  color: #121212;
+  box-shadow: 0 0 20px #05d9e8;
+}
+.button-group button:active {
+  transform: scale(0.95);
+}
